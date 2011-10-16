@@ -71,7 +71,7 @@ class Player:
                 
     def drawCards(self, N):
         'draw N cards from deck into hand, updates hand. '
-        if N > len(self.deck):
+        if N > len(self.deck)-1:
             self.pickupDiscards()
         for ii in range(N):
             card = self.deck.pop()
@@ -252,16 +252,25 @@ class Player:
         numOfRev += len(self.findUnqCards(['blue', 'start faceoff'], prosp_hand))
         return numOfRev
 
-        
+    # TBD   
+    # currently this just returns a value based on the highest faceoffVal
+    # this should really take into accoutn reversals & alternate faceoff cards
     def faceoffStr(self, prosp_hand):
         'pass in a prosp_hand list and this will return the faceoff strength\
         as an integer'
-                
+        top_faceoff = 0
+        for card in prosp_hand:
+            if allCards[card]['faceoffVal'] > top_faceoff:
+                top_faceoff = allCards[card]['faceoffVal']
+        if top_faceoff <= 0:
+            return (0)
+        else:
+            return (INITIATIVE_VAL * top_faceoff/(MAX_FACEOFF+1.0))
         
     # l_stat a list of status values
     def prospHandVal(self, newInitiative, prosp_hand, l_stat):
         'looks at a propective hand and tells you the hand value. Not including stun/unstun pairs'
-        p_hand_val = 0
+        p_hand_val = 0.0
         for card in prosp_hand: 
             p_hand_val += allCards[card]['price']
         #add in value of the against*Odds cards
@@ -288,7 +297,7 @@ class Player:
         else:
             p_hand_val += myPosWt['blueStunUnstunPair']*blueStunUnstunPairs
         #add value for faceoff strength if we're starting a faceoff
-        if (my_init == 'faceoff') and not('stunned' in self.status):
+        if (newInitiative == 'faceoff') and not('stunned' in self.status):
             p_hand_val += self.faceoffStr(prosp_hand)
         if dbg3<=2: print self.char,'propsHandVal: p_hand_val=',p_hand_val
         return p_hand_val
@@ -620,7 +629,7 @@ class Player:
                 faceoff_str = 1 + allCards[card]['faceoffVal']/MAX_FACEOFF
                 if faceoff_str > recorded_strength:
                     recorded_strength = faceoff_str
-         return recorded_strength
+        return recorded_strength
         
                                
     
@@ -658,9 +667,9 @@ class Player:
             if attr == 'stun':
                 ca_list = self.findUnqCards(['unstun'], prosp_hand)
                 if ca_list:
-                    cpi_val += cpiPosConstants['i become stunned with unstun available']
+                    cpi_val += cpiPosConstants['i become stunned w/unstun']
                 else:
-                    cpi_val += cpiPosConstants['i become stunned without unstun available']
+                    cpi_val += cpiPosConstants['i become stunned wo/unstun']
             elif (attr == 'unstun') and ('stunned' in self.status):
                 cpi_val += cpiPosConstants[attr]
             elif (attr == 'stun') and not ('stunned' in your_status):
@@ -670,17 +679,23 @@ class Player:
             elif (attr == 'wound') and not ('wounded' in your_status):
                 cpi_val += cpiPosConstants[attr]
             elif (attr == 'red'):
-                cpi_val += cpiPosConstants['you must defend']
-                total_cards_defender_loses += 1
+                if your_hand_size == 0:
+                    cpi_val = cpiPosConstants['instant win']
+                    return cpi_val
+                else:
+                    cpi_val += cpiPosConstants['you must defend']
+                    total_cards_defender_loses += 1
             elif (attr == 'start faceoff'):
                 cpi_val += self.detFaceoffStr(prosp_hand)
             else:
                 cpi_val += cpiPosConstants['attr']
                 if (attr == 'you discard') or (attr == 'you discard random'):
                     total_cards_defender_loses += 1
+                    
         if total_cards_defender_loses > your_hand_size:
             cpi_val = cpiPosConstants['instant win']
-        elif total_cards_defender_loses = your_hand_size:            
+            return cpi_val
+        elif total_cards_defender_loses == your_hand_size:            
             cpi_val += cpiPosConstants['you have zero cards']
         return cpi_val
         
@@ -702,12 +717,16 @@ class Player:
                 cpi.append(card)
                 cpi.append(ii)
                 if self.legal_play(cpi, self.init):
-                    cpi_pos_val = self.calcCpiPosVal(cpi, your_status, self.init)
+                    cpi_pos_val = self.calcCpiPosVal(cpi, your_hand_size, your_status, self.init)
                     if cpi_pos_val >= best_pos_val:
                         best_pos_cpi_list.append(cpi)
                         best_pos_val = cpi_pos_val
-                    if not('stunned' in self.status):
-                        if 'caBlue' in allCards[cpi[0]]['attr'][cpi[1]]:
+                        self.best_cpi = cpi
+                        
+                        
+                        
+#                    if not('stunned' in self.status):
+#                        if 'caBlue' in allCards[cpi[0]]['attr'][cpi[1]]:
                             #determine all the possible counter-attacks that
                             #could be use, and try those
                             #TBD

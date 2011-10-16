@@ -229,7 +229,7 @@ charDeck = {'panzer':['sc1', 'sc2', 'sc3', 'sc4',
 # Constants for controlling the weighting of position values
 myPosWt = {'have a red':0.0,
            'have a blue':0.5,
-           'have a blue while on def':1,
+           'have a blue while on def':1.0,
            'have a red while on atk':0.0,
            'blueStunUnstunPair':1,
            'blueStunUnstunPair while stunned':0.8,
@@ -332,17 +332,17 @@ yourHandValue = { 0: 1,
                   
 #Constants for determining cpi positional value
 #These only kick in if relavent (ie, they can actually effect you)
-cpiPosContants = {'i become stunned without unstun available' : -2.0,
-                  'i become stunned with unstun available' : -1.0,
+cpiPosContants = {'i become stunned wo/unstun' : -2.0,
+                  'i become stunned w/unstun' : -1.0,
                   'you become stunned' : 2.0,
-                  'i become unstunned' : 2.0
+                  'i become unstunned' : 2.0,
                   'i become wounded' : -1.0,
                   'you become wounded' : 1.0,
-                  'i become unwounded' : 1.0
+                  'i become unwounded' : 1.0,
                   'i must discard' : -0.8,
                   'you must discard' : 1.0,
                   'you must discard random' : 1.0,
-                  'instant win' : 100.0,
+                  'instant win' : 1000.0,
                   'you have no cards left' : 3.0,
                   'you must defend' : 1.0
                   }           
