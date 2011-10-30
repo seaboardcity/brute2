@@ -1,4 +1,6 @@
 
+
+
 Algorithm for picking cards
 
 best_position_val = -100
