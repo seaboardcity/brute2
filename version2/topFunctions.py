@@ -4,10 +4,13 @@ from random import *
 import tv
 
 
-def setupMainDeck():
+def setupDecks():
     'create the main deck and shuffle it'
     tv.mainDeck = tv.standardDeck[:]
     shuffle(tv.mainDeck)
+    tv.discardDeck = []
+    
+    
     
 
 

@@ -3,5 +3,5 @@ from random import *
 import tv
 from topFunctions import *
 
-setupMainDeck()
+setupDecks()
 
