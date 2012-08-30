@@ -14,7 +14,7 @@ class Player:
 
     def __init__(self, name, abilities):
         'constructor. Names the char, sets status information'
-        self.lastPlay = 'blue'
+        self.lastPlay = '' #track the panel ID last played, this is used in various ways later on
         self.init = 'faceoff' # faceoff|faceoff red|have|dont have
         self.status = abilities
         self.status.append('not stunned')

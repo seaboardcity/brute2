@@ -3,5 +3,7 @@ from random import *
 import tv
 from topFunctions import *
 
+#setup a 1 on 1 fight
+tv.odds='1to1'
 setupDecks()
 
