@@ -9,6 +9,9 @@ def setupDecks():
     tv.mainDeck = tv.standardDeck[:]
     shuffle(tv.mainDeck)
     tv.discardDeck = []
+
+def buildPanelDictionary():
+    'buildup a panel dictionary and assign it to a top variable'
     
     
     
