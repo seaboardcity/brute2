@@ -8,8 +8,8 @@ class Hand:
    
     def add2hand(self, card):
         'Inserts a card into hand. The card is converted into panels as it goes\
-        in Note, discard if handsize is too big is \
-        done seperately. THIS IS ON PURPOSE'
+        in Note, discard if handsize is too big is done seperately. THIS IS ON PURPOSE'
+        
                   
     def drawCards(self, N):
         'draw N cards from main deck into hand and update the hand. Cards are\
@@ -29,7 +29,7 @@ class Hand:
     def initialDraw(self):
         'do the initial draw of the hand and add in virtual cards'
         self.drawCards(tv.maxHandSz)
-        self.add2hand('v1')
+        self.add2hand('99A')
             
     def discardCard(self, card):
         'discard a particular card. the v1 card cannot be discarded'
