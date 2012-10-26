@@ -49,12 +49,13 @@ dCards = {
 #all the panel characteristics
 #
 # ATTRIBUTES
-# things the card does: 
+# things the card does (note, by default the terms are about 'i' not 'you'): 
 #    stunned
 #    you are stunned, 
-#    unstun, 
+#    unstunned, 
 #    start faceoff, 
-#    caBlue
+#    caBlue    -- this means it can be used to trigger a counter-attack
+#    counter attack
 #    gain initiative, 
 #    lose initiative, 
 #    draw, 
@@ -64,8 +65,9 @@ dCards = {
 #    you discard
 #    you discard random
 #    wounded
-#    unwound
+#    unwounded
 #    you are wounded
+
 #
 # RESTRICTIONS
 # for 'restr' you must have the entire list matching to use the card
