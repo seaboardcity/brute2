@@ -103,6 +103,14 @@ dCards = {
 # 3to1
 # not in faceoff
 # 'few cards'
+#
+# #special abilities for pcs
+# Invulnerable -- When playing megaDefend draw 2 cards and keep 1 instead of drawing 1 card
+# Fast -- +6 on Faceoff
+# Absorbtion -- When playing damageShield the your opponent's Red card they just played goes into your hand not the discard pile
+# Dodgy -- When playing a Reversal draw a card
+# Overwhelming Power -- When playing a megaAttack your opponent must discard 1 card at random instead of their choice
+# 
 
 dPanels = {'defend' : {'attr':['caBlue'],
                       'color':['blue'],
@@ -158,7 +166,15 @@ dPanels = {'defend' : {'attr':['caBlue'],
                               'color':['blue'],
                               'restr':['blue', '3to1'],
                              'value':0.0},
+          'feint' : {'attr':['you discard'],
+                        'color':['green'],
+                        'restr':['prev card not green'],
+                        'value':1.5},     
            #end of standard cards
+          'uncannyRecovery' : {'attr':['unstun','draw card'],
+                      'color':['blue'],
+                       'restr':[], 
+                       'value':1.5},                    
            'megaDefend' : {'attr':['draw','caBlue'],
                       'color':['blue'],
                        'restr':['can play megaDefend'],
@@ -171,28 +187,26 @@ dPanels = {'defend' : {'attr':['caBlue'],
                             'color':['red'],
                             'restr':['can play inflictWound'],
                             'value':1.5},    
-          'inflictStun' : {'attr':['draw','you are stunned'],
+          'stunningAttack' : {'attr':['draw','you are stunned'],
                            'color':['red'],
-                           'restr':['can play inflictStun'],
+                           'restr':['can play stunningAttack'],
                            'value':2.5},     
           'unusualStun' : {'attr':['draw','you are stunned'],
                            'color':['green'], 
                            'restr': ['prev card not green', 'can play unusualStun'], 
                            'value':2.5},
           'damageShield' : {'attr':['you discard'],
-                            'color':['blue'], 'restr': [], 'value':1.5},
-          'feint' : {'attr':['grab card'],
-                        'color':['green'],
-                        'restr':['prev card not green'],
-                        'value':1.5},     
+                            'color':['blue'], 
+                            'restr': ['can play damageShield'], 'value':1.5},
           'grabCard' : {'attr':['grab card'],
                         'color':['green'],
-                        'restr':['prev card not green'],
+                        'restr':['can play grabCard', 'prev card not green'],
                         'value':1.5},     
-          'inflictDiscard' : {'attr':['draw','you discard'],
-                              'color':['green'],
-                              'restr':['prev card not green'],
-                              'value':1.1},             
+          'unusualAttack' : {'attr':['draw','you discard'],
+                             'color':['green'],
+                             'restr':['can play unusualAttack', 'prev card not green'],
+                             'value':1.1},
+          # special "always available" powers
           'passInitiative1' : {'attr': ['draw','draw','lose initiative','discard'],
                                'color':['green'],
                                'restr': [],
@@ -202,4 +216,5 @@ dPanels = {'defend' : {'attr':['caBlue'],
                                'restr': [],
                                'value':0.0}
             }
+
 
