@@ -1,0 +1,37 @@
+
+How to develop the new program for this card game:
+
+CP == card-panel values
+
+** develop & testbench ability to create a deck, draw hands,
+discard cards, add new cards.
+
+** develop & testbench ability to select from a hand a subset of
+legal CP
+
+** develop & testbench ability to play a CP
+
+** develop & testbench ability to "run a game" where card
+selection is done randomly from the legal CP (ie, no attempt is made
+to get the "best" card)
+
+** develop & testbench ability to select a best card to play "atm"
+   without concern for long-term effects.
+
+** develop & testbench ability to select a best card taking into
+   account 'ties' where the short-term play values of several cards
+   match
+
+** insert card selection algorithm into the game playing
+   framework. Testbench
+
+** Develop & testbench framework for 1vMany fights
+
+** Develop & testbench framework for multiple test fights
+
+
+
+
+
+
+
