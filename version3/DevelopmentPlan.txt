@@ -3,8 +3,12 @@ How to develop the new program for this card game:
 
 CP == card-panel values
 
-** develop & testbench ability to create a deck, draw hands,
-discard cards, add new cards.
+** develop & testbench ability to create a deck, draw hands & create
+the CP list, discard cards, add new cards. A hand is created using
+dPanels, dCards to construct a list with CP values. 
+
+** Add ability to have "Overwhelming Attack" and "Invulnerabilty" like
+special powers. In that case when a CP is added to a hand, the 
 
 ** develop & testbench ability to select from a hand a subset of
 legal CP

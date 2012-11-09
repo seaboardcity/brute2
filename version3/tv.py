@@ -14,6 +14,12 @@ maxHandSz=7
 #3to1
 odds=''
 
+# CP listing (generated on the fly)
+#  010 == card 1, attack panel
+#  071 == card 1, counterattack panel
+#  010 == card 1, attack panel
+#  112 == card 1, overAttack panel
+
 #dCards is a dictionary with keys = card ID and the values are a list of panel IDs
 dCards = {
      '01' : {'panels' : ['attack', 'counterAttack'], 'faceoffVal' : 1.0},
@@ -175,11 +181,19 @@ dPanels = {'defend' : {'attr':['caBlue'],
                       'color':['red'],
                       'restr':['not stunned','can play megaAttack'],
                       'value':1.0},
+          'overAttack' : {'attr':['draw','you discard random'],
+                      'color':['red'],
+                      'restr':['not stunned','can play megaAttack'],
+                      'value':1.0},
           'uncannyRecovery' : {'attr':['unstun','draw card'],
                       'color':['blue'],
                        'restr':[], 
                        'value':1.5},                    
            'megaDefend' : {'attr':['draw','caBlue'],
+                      'color':['blue'],
+                       'restr':['can play megaDefend'],
+                       'value':2.0},
+           'invul' : {'attr':['draw','draw','discard''caBlue'],
                       'color':['blue'],
                        'restr':['can play megaDefend'],
                        'value':2.0},
