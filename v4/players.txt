@@ -1,0 +1,201 @@
+
+Panzer:
+* Mega Defend (Armor Plating) -- defend & I draw
+* Ultra Defend 
+* Mega Attack (Gauss Cannon) -- Normal Attack
+* Ultra Attack (Hyper-Velocity Missile) -- you must defend and you must discard a card
+* Mega Power
+* Ultra Power
+
+Ion, Zcrafter
+* Mega Defend -- I draw 2 cards and keep one
+* Ultra Defend -- I draw 2 cards and keep one
+* Mega Attack (Haymaker) -- you must defend and you discard
+* Ultra Attack -- you must defend and you are stunned
+* Mega Power
+* Ultra Power
+
+Solar Eclipse
+* Mega Defend 
+* Ultra Defend (Hard Light Field) -- defend & I draw
+* Mega Attack (Darkness Blast) -- you must defend and you discard
+* Ultra Attack 
+* Mega Power -- 
+* Ultra Power (Dazzle) -- You are Stunned. I Draw.
+
+Firebolt
+* Mega Defend
+* Ultra Defend -- defend and you must discard
+* Mega Attack -- you must defend and you discard
+* Ultra Attack -- you must defend and you discard
+* Mega Power
+* Ultra Power
+
+Warhawk
+* +10 Faceoff
+* Mega Defend
+* Ultra Defend -- defend & I have initiative
+* Mega Attack
+* Ultra Attack
+* Mega Power
+* Ultra Power (superspeed) -- draw 2 cards
+
+Shadow Wolf
+* Mega Defend
+* Ultra Defend (regen) - defend & draw card
+* Mega Attack (claws) -- you must defend and you are wounded
+* Ultra Attack
+* Mega Power
+* Ultra Power (regen) -- draw 2 cards & unwound
+
+Dorothy
+* +5 Faceoff
+* Mega Defend
+* Ultra Defend -- defend & I have initiative
+* Mega Attack
+* Ultra Attack -- you must defend and you are stunned
+* Mega Power
+* Ultra Power 
+
+Logos
+* Mega Defend
+* Ultra Defend (duplicates) -- defend & I have initiative
+* Mega Attack
+* Ultra Attack 
+* Mega Power (fear) -- you must discard and I draw
+* Ultra Power (confusion) -- I draw one random card from your hand and put in my hand
+
+Mesmerella
+* Mega Defend
+* Ultra Defend 
+* Mega Attack
+* Ultra Attack 
+* Mega Power (mind-control) -- I draw one random card from your hand and put in my hand
+* Ultra Power (mind-control) -- I draw one random card from your hand and put in my hand
+
+The Police
+* Mega Defend
+* Ultra Defend 
+* Mega Attack (Heavy Weapons) -- you must defend and discard
+* Ultra Attack
+* Mega Power (reinforcements) -- draw 2 cards & unwound
+* Ultra Power 
+
+The Grey Ghost
+* Mega Defend
+* Ultra Defend (regen) - defend & draw card
+* Mega Attack (claws) -- you must defend and you are wounded
+* Ultra Attack
+* Mega Power
+* Ultra Power (regen) -- draw 2 cards & unwound
+
+
+
+********************************************************************************
+SPECIAL COMBAT ABILITIES
+
+ Tough -- When playing megaDefend I draw 1 card
+ Invulnerable -- When playing megaDefend I draw 2 cards and keep 1
+ Fast -- +6 on Faceoff
+ Absorbtion -- When playing damageShield the your opponent's Red card
+ they just played goes into your hand not the discard pile OR
+ absorbtion -- You have ALL the RED and BLUE special abilities all
+ your opponent have (is this workable against multiple opponents?)
+
+ Dodgy -- When playing a Reversal draw a card
+
+ Overwhelming Power -- When playing a megaAttack you must
+ discard 1 card at random and play a defense
+
+
+Super-Speed (RED): I have +10 to my FACEOFF values
+Precog (GREEN): I have +10 to my FACEOFF values
+Martial-Artist (GREEN): When playing a Feint opponent must discard a random card
+Regen (BLUE): When playing a Catch A Breath I always draw an additional card 
+Regen (BLUE): I can instantly become Unwounded whenever I want any number of times
+Damage Shield: 
+
+
+1 deck is used (54 cards)  (PROG note, each players hand is composed
+of panels not card. 011 is panel 1 from card 01, 012 is panel 2 from
+card 01, 120 is panel 0 from card 12, etc)
+
+
++ Changes to rules from standard fencing deck:
+* All characters draw 7 cards at the start of a fight.
+* Rules for "Stunned" instead of "Drop Weapon" (see below).
+* All the "counterattack" cards are playable after ANY Blue card
+(except Disengage or Stunned).
+* You cannot play blue/counterattack during a faceoff. meh, maybe
+allow this.
+* All discards are face up. 
+* Special cards have the text for the tile in reversed colors. A RED
+special would have white text with red background around the title
+text. A BLUE special would have white test with blue background, etc.
+* The text on the cards takes place immediately, before the next card
+is played.
+* all cards use dthe standard text & names for titles. Special cards
+have reversed colors. Text in italics is for flavor only and has no
+impact on the rules.
+* When a card is played it's effect takes place immediately. When in
+doubht, the effects take place in the order that they are written on
+the card.
+* Playing a card does not effect init unless the card states otherwise.
+* If both players "lose" at the same time, then both players draw a
+card and go to faceoff. Note, this should only happen during a faceoff
+as otherwise one PC will "lose" before the other.
+
+
+*************************************************************************************
+Faceoff Rules:
+
+Both players must play a Red or Blue. If one player has no cards then
+they lose the game. If neither player has a card then both draw cards
+and try again. If both play Red then the highest Faceoff Value wins
+init. If there is a tie then try again. If both play Blue then both
+players draw a card and try again regardless of card text (no ca). If
+one plays Red and the other Blue the Red player gains the init (ca's
+can be played).
+
+OR
+All cards can be played for Face-Offs. The Green & Blue Cards have
+very low initiative numbers however. (This allows the rules to be a
+little bit simpler).
+
+
+*************************************************************************************
++ Rules for being stunned:
+Stunned characters can immediately recover by discarding 3 cards?
+Some special cards may allow you to recover from being
+stunned. (example: 'Regeneration (BLUE): This card acts as a defense
+and also immediately recovers a character from being Stunned').
+
+A Stunned character cannot play Red cards.
+A Stunned character cannot play a card which will stun him again.
+A Stunned character can be Stunned again with no additional penalties to the stunnee.
+
+*************************************************************************************
+When you have initiative you may:
+* play a red
+* play a green
+* draw 2 cards, discard a card, and surrendor the initiative
+* recover from being stunned & surrender the initiative
+* possible change: You may surrendor the initiative, discard up to
+three cards, and draw a card for each card you discarded.
+
+
+*************************************************************************************
+
+Dazzle: you are stunned and I draw a card and retain
+initiative. //mental attacks, magic, gas, etc
+
+Unconventional Attack: i draw a random card from your hand and keep
+it. I retain initiative.  //entangle, martial-arts, etc
+
+
+
+*******************************************************************************
+
+
+
+
