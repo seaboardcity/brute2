@@ -58,7 +58,7 @@ dCards = {
      '34' : {'panels' : ['recover','megaPower'], 'faceoffVal' : 0},
      '35' : {'panels' : ['defend', 'counterAttack'], 'faceoffVal' :  0},
      '36' : {'panels' : ['defend', 'ultraDefend'], 'faceoffVal' : 0},
-     '37' : {'panels' : ['defend'], 'faceoffVal' : 0},
+     '37' : {'panels' : ['defend','recover'], 'faceoffVal' : 0},
      '38' : {'panels' : ['defend', 'againstTheOdds'], 'faceoffVal' : 0},
      '39' : {'panels' : ['defend', 'againstTheOdds'], 'faceoffVal' : 0},
      '40' : {'panels' : ['defend', 'againstAllOdds'], 'faceoffVal' : 0},

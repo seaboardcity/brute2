@@ -32,10 +32,9 @@ Firebolt
 * Ultra Power
 
 Warhawk
-* +10 Faceoff
 * Mega Defend
 * Ultra Defend -- defend & I have initiative
-* Mega Attack
+* Mega Attack -- +10 Faceoff
 * Ultra Attack
 * Mega Power
 * Ultra Power (superspeed) -- draw 2 cards
@@ -49,11 +48,10 @@ Shadow Wolf
 * Ultra Power (regen) -- draw 2 cards & unwound
 
 Dorothy
-* +5 Faceoff
 * Mega Defend
 * Ultra Defend -- defend & I have initiative
-* Mega Attack
-* Ultra Attack -- you must defend and you are stunned
+* Mega Attack -- +5 Faceoff
+* Ultra Attack (concushion grenade) -- you must defend and you are stunned
 * Mega Power
 * Ultra Power 
 
@@ -82,12 +80,7 @@ The Police
 * Ultra Power 
 
 The Grey Ghost
-* Mega Defend
-* Ultra Defend (regen) - defend & draw card
-* Mega Attack (claws) -- you must defend and you are wounded
-* Ultra Attack
-* Mega Power
-* Ultra Power (regen) -- draw 2 cards & unwound
+
 
 
 
